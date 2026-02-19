@@ -17,7 +17,7 @@ class Winner(Base):
     gender = Column(Enum('male', 'female'))
 
     __table_args__ = (
-        UniqueConstraint('name', 'category', 'year', name='uix_winner_unique'),
+        UniqueConstraint('name', 'category', 'year', name='uix_winner_unique'), # Não pode exister algo que o nome + categoria + ano sejam iguais
     )
 
     def __repr__(self):
@@ -38,6 +38,8 @@ session = Session()
 # albert = Winner(**nobel_winners[0]) -> Objeto que vai pro banco
 winner_rows = [Winner(**w) for w in nobel_winners]
 
+result = session.query(Winner).filter_by(nationality = 'Swiss').all() # pega somente os que tem essa nacionalidade
+
 try:
     session.add_all(winner_rows) # Registra o objeto para ser salvo.
     session.commit() # Salva no banco o que foi criado
@@ -50,6 +52,7 @@ except IntegrityError:
 # session.new -> Mostra que tem algo novo esperando o commit
 
 print(session.query(Winner).count())
+print(result)
 # Se quiser ver de modo mais facil
 #  winners = session.query(Winner).all()
 # print(winners)
