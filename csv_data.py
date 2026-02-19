@@ -1,6 +1,7 @@
 nobel_winners = [
     {'name': 'Albert Einstein', 'category': 'Physics', 'nationality': 'Swiss',  'gender': 'male','year': 1921},
-    {'name': 'Marie Curie', 'category': 'Chemistry','nationality': 'Polish', 'gender': 'female', 'year': 1911}
+    {'name': 'Marie Curie', 'category': 'Chemistry','nationality': 'Polish', 'gender': 'female', 'year': 1911},
+    {'name': 'Bertha Lutz', 'category': 'Physics', 'nationality': 'Brazil',  'gender': 'male','year': 1970},
 ]
 
 f = open('nobel_winners.csv', 'w')
