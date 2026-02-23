@@ -45,7 +45,7 @@ res = session.query(Winner).order_by('year').all()
 
 marie = session.query(Winner).get(2)
 marie.nationality = 'French' 
-session.commit()
+session.commit() # Cada coisa que for salvar diferene precisa de um session.commit diferente.
 
 try:
     session.add_all(winner_rows) # Registra o objeto para ser salvo.
