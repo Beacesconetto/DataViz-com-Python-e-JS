@@ -1,0 +1,51 @@
+svg#chart {
+    background: lightgray;
+    font-family: sans-serif;
+}
+
+#chart circle {
+    fill: lightblue;
+}
+
+#chart line {
+    stroke: #555555;
+    stroke-width: 2;
+}
+
+#chart rect {
+    stroke: red;
+    fill: white;
+}
+
+#chart polygon {
+    fill: green;
+}
+
+
+#chart text {
+    font-size: 14px;
+}
+
+#chart text#title {
+    font-size: 18px;
+}
+
+#chart path {
+    stroke:purple;
+    fill: none;
+}
+
+#chart2 path {
+    stroke: purple;
+    fill: none;
+}
+
+#chart3 path {
+    stroke: purple;
+    fill: none;
+}
+
+#chart4 {
+    fill: blue;
+}
+
